@@ -1,0 +1,25 @@
+<p>structuraldirective works!</p>
+
+<h1 *ngIf="num>0">Positive Number</h1>
+
+<h1 *ngIf="num<0">Negative Number</h1>
+
+
+<h1 *ngIf="num%2==0">Even Number</h1>
+
+<h1>{{a.id}}  {{a.name}}</h1>
+
+<h1 *ngFor="let i of b">{{i.id}} {{i.name}}</h1>
+
+<div [ngSwitch]="option">
+    <h1 *ngSwitchCase="1">Monday</h1>
+    <h1 *ngSwitchCase="2">Tuesday</h1>
+    <h1 *ngSwitchCase="3">Wednesday</h1>
+    <h1 *ngSwitchCase="4">Thursday</h1>
+    <h1 *ngSwitchCase="5">Friday</h1>
+    <h1 *ngSwitchCase="6">Saturday</h1>
+    <h1 *ngSwitchCase="7">Funday</h1>
+</div>
+
+<h2 [ngClass]="st1">Hello World</h2>
+<h2 [ngClass]="st1">IT Vedant</h2>

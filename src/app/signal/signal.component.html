@@ -1,0 +1,36 @@
+<p>signal works!</p>
+
+<h2>Angular Signals</h2>
+
+<p>Counter : {{counter()}}</p>
+
+<button (click)="increment()">Increment Counter</button>
+
+<button (click)="decrement()">Decrement Counter</button>
+
+<p>Double Counter (using computed) {{doubleCounter()}}</p>
+
+<hr>
+<h3>User Info:</h3>
+<p>Name :{{user().name}}</p>
+<p>Age : {{user().age}}</p>
+
+<button (click)="increaseAge()">Increase Age Of User </button>
+
+<hr>
+<h2>Toggle Feature</h2>
+<p>Feature is : {{isEnabled()?'Enabled':'Disabled'}}</p>
+<button (click)="toggleFeature()">Toggle</button>
+
+<hr>
+<h2>Theme Switcher</h2>
+<p>Current Theme : {{theme()}}</p>
+<button (click)="switchTheme()">Switch Theme</button>
+
+<hr>
+
+<h2>Item List</h2>
+<ul>
+    <li *ngFor="let item of items()">{{item}}</li>
+</ul>
+<button (click)="addItem()">Add Item</button>

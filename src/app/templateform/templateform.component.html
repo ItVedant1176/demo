@@ -1,0 +1,28 @@
+<p>templateform works!</p>
+
+<h3>Registeration Form</h3>
+<form #myform="ngForm">
+<input type="text" name="firstname" placeholder="Enter First Name" ngModel><br><br>
+
+<input type="text" name="middlename" placeholder="Enter Middle Name" ngModel><br><br>
+
+<input type="text" name="lastname" placeholder="Enter Last Name" ngModel><br><br>
+
+<input type="date" name="birthdate" placeholder="Enter Birthdate" ngModel><br><br>
+
+<input type="text" name="city" placeholder="Enter City Name" ngModel><br><br>
+
+<input type="tel" name="contact" placeholder="Enter Mobile Number" ngModel><br><br>
+
+<pre>
+    <input type="button" (click)="RegisterData()" value="submit">   <input type="button" (click)="clearData()" value="reset"> 
+</pre>
+</form>
+
+<p *ngIf="status">{{myform.value}}</p>
+<p *ngIf="status">
+    Name :{{myform.controls ['firstname'].value}}  {{myform.controls ['middlename'].value}}  {{myform.controls ['lastname'].value}}<br>
+    Birthdate : {{myform.controls ['birthdate'].value}}<br>
+    City :{{myform.controls ['city'].value}} <br>
+    Contact Number: {{myform.controls ['contact'].value}}
+</p>
